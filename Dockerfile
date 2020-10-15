@@ -1,38 +1,17 @@
-FROM debian:9.2
+FROM openjdk:8
+MAINTAINER Abhisek Datta <abhisek@appsecco.com>
 
-LABEL maintainer "opsxcq@strm.sh"
+RUN apt-get update
+RUN apt-get install -y default-mysql-client
+RUN apt-get install -y maven
 
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y \
-    debconf-utils && \
-    echo mariadb-server mysql-server/root_password password vulnerables | debconf-set-selections && \
-    echo mariadb-server mysql-server/root_password_again password vulnerables | debconf-set-selections && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y \
-    apache2 \
-    mariadb-server \
-    php \
-    php-mysql \
-    php-pgsql \
-    php-pear \
-    php-gd \
-    && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+WORKDIR /app
+COPY pom.xml pom.xml
+RUN mvn dependency:resolve
 
-COPY php.ini /etc/php5/apache2/php.ini
-COPY dvwa /var/www/html
+COPY . .
+RUN mvn clean package
+RUN chmod 755 /app/scripts/start.sh
 
-COPY config.inc.php /var/www/html/config/
-
-RUN chown www-data:www-data -R /var/www/html && \
-    rm /var/www/html/index.html
-
-RUN service mysql start && \
-    sleep 3 && \
-    mysql -uroot -pvulnerables -e "CREATE USER app@localhost IDENTIFIED BY 'vulnerables';CREATE DATABASE dvwa;GRANT ALL privileges ON dvwa.* TO 'app'@localhost;"
-
-EXPOSE 80
-
-COPY main.sh /
-ENTRYPOINT ["/main.sh"]
+EXPOSE 8080
+CMD ["sh", "-c", "/app/scripts/start.sh"]
