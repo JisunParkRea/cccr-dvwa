@@ -29,7 +29,7 @@ spec:
           value: ec95c258266b8e985848cae688effa2b
         - name: MYSQL_USER
           value: root
-        image: app
+        image: jisunpark/cccr-dvwa-java-web:latest
         imagePullPolicy: ""
         name: app
         ports:
