@@ -7,12 +7,15 @@ import static org.junit.Assert.*;
 
 public class UserAuthenticationServiceTest {
 
+	@Before
+    public void setUp() {
+    	UserAuthenticationService u = new UserAuthenticationService();
+    }
+
 	@Test
 	public void testAuthenticate() {
-		UserAuthenticationService u = new UserAuthenticationService();
-
-		String login = "son";
-		String password = "dkagh1.";
+		String login = "noLogin";
+		String password = "noPasswd";
 
 		User user = u.authenticate(login, password);
 		assertNull(user);
