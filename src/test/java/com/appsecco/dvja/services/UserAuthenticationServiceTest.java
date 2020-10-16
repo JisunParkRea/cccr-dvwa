@@ -1,7 +1,7 @@
 package com.appsecco.dvja.services;
 
 import com.appsecco.dvja.models.User;
-import org.junit.Test;
+import org.junit.*;
 import static org.junit.Assert.*;
 
 
