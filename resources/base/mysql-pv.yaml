@@ -7,6 +7,6 @@ apiVersion: v1
       storage: 2Gi
   volumeMode: Filesystem
   accessModes:
-  - ReadWriteMany
+  - ReadWriteOnce
   storageClassName: manual
   persistentVolumeReclaimPolicy: Delete
