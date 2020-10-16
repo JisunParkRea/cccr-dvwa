@@ -6,10 +6,11 @@ import static org.junit.Assert.*;
 
 
 public class UserAuthenticationServiceTest {
+	UserAuthenticationService u;
 
 	@Before
     public void setUp() {
-    	UserAuthenticationService u = new UserAuthenticationService();
+    	u = new UserAuthenticationService();
     }
 
 	@Test
