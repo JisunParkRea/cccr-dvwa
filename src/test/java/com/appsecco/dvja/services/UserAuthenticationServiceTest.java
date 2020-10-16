@@ -11,6 +11,7 @@ public class UserAuthenticationServiceTest {
 	@Before
     public void setUp() {
     	u = new UserAuthenticationService();
+    	u.setUserService(u);
     }
 
 	@Test
