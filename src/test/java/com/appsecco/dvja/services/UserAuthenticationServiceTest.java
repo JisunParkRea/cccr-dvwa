@@ -15,6 +15,6 @@ public class UserAuthenticationServiceTest {
 		String password = "noPassword";
 
 		User user = u.authenticate(login, password);
-		asserNull(user);
+		assertNull(user);
 	}
 }
