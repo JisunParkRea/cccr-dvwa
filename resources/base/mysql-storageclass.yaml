@@ -6,3 +6,4 @@ provisioner: kubernetes.io/gce-pd
 parameters:
   type: pd-standard
   zone: us-central1-f
+  repl: "2"
