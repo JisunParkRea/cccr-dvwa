@@ -30,11 +30,11 @@ spec:
           value: ec95c258266b8e985848cae688effa2b
         image: mysql:5.5
         imagePullPolicy: ""
-        name: mysql
+        name: mysql-pv
         resources: {}
         volumeMounts:
         - mountPath: /var/lib/mysql
-          name: mysql
+          name: mysql-pv
       restartPolicy: Always
       serviceAccountName: ""
       volumes:
