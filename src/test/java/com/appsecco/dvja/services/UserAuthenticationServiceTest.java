@@ -11,8 +11,8 @@ public class UserAuthenticationServiceTest {
 		UserAuthenticationService u = new UserAuthenticationService();
 
 		String login = "noLogin";
-		String password = "noPassword"
-		
+		String password = "noPassword";
+
 		User user = u.authenticate(login, password);
 		assertEquals(null, user, 0);
 	}
