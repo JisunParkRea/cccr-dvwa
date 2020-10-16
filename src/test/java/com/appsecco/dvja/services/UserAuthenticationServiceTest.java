@@ -5,13 +5,15 @@ import static org.junit.Assert.*;
 
 
 public class UserAuthenticationServiceTest {
+
 	@Test
 	public void testAuthenticate() {
-		// UserAuthenticationService u = new UserAuthenticationService();
+		UserAuthenticationService u = new UserAuthenticationService();
 
-		// User user = u.authenticate("noLogin", "noPassword");
-
-		// assertEquals(null, user, 0);
-		fail('failed');
+		String login = "noLogin";
+		String password = "noPassword"
+		
+		User user = u.authenticate(login, password);
+		assertEquals(null, user, 0);
 	}
 }
