@@ -7,9 +7,8 @@ metadata:
   name: mysql
 spec:
   accessModes:
-  - ReadWriteMany
+  - ReadWriteOnce
   resources:
     requests:
       storage: 1Gi
-  storageClassName: csi-cephfs
 status: {}
