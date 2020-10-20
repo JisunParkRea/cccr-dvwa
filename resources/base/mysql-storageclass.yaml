@@ -2,7 +2,8 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: silver
-provisioner: netapp.io/trident 
+provisioner: kubernetes.io/gce-pd
 parameters:
-  backendType: ontap-nas 
-allowVolumeExpansion: true
+  type: pd-standard
+  fstype: ext4
+volumeBindingMode: WaitForFirstConsumer
