@@ -6,13 +6,13 @@ metadata:
     kompose.version: 1.21.0 (992df58d8)
   creationTimestamp: null
   labels:
-    io.kompose.service: mysql2
-  name: mysql2
+    io.kompose.service: mysql
+  name: mysql
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: mysql2
+      io.kompose.service: mysql
   strategy:
     type: Recreate
   template:
@@ -30,15 +30,15 @@ spec:
           value: ec95c258266b8e985848cae688effa2b
         image: mysql:5.5
         imagePullPolicy: ""
-        name: mysql2
+        name: mysql
         resources: {}
         volumeMounts:
         - mountPath: /var/lib/mysql
-          name: mysql2
+          name: mysql
       restartPolicy: Always
       serviceAccountName: ""
       volumes:
-      - name: mysql2
+      - name: mysql
         persistentVolumeClaim:
           claimName: mysql2
 status: {}
