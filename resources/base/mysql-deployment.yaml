@@ -40,5 +40,5 @@ spec:
       volumes:
       - name: mysql
         persistentVolumeClaim:
-          claimName: mysql
+          claimName: mysql2
 status: {}
