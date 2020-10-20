@@ -4,7 +4,7 @@ metadata:
   creationTimestamp: null
   labels:
     io.kompose.service: mysql
-  name: mysql
+  name: mysql2
 spec:
   accessModes:
   - ReadWriteOnce
