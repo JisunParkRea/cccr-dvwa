@@ -6,7 +6,7 @@ metadata:
     app: app
 spec:
   ports:
-    - port: 8080
+    - port: 3306
   selector:
     app: app
     tier: mysql
