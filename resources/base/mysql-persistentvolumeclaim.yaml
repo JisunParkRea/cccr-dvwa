@@ -7,8 +7,10 @@ metadata:
   name: mysql
 spec:
   accessModes:
-  - ReadWriteOnce
+  - ReadWriteMany
+  storageClassName: mysql
+  volumeName: dbserver
   resources:
     requests:
-      storage: 1Gi
+      storage: 5Gi
 status: {}
