@@ -9,6 +9,7 @@ spec:
   accessModes:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
+  storageClassName: mysql
   mountOptions:
     - hard
     - nfsvers=3
