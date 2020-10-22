@@ -35,11 +35,11 @@ spec:
         resources: {}
         volumeMounts:
         - mountPath: /var/lib/mysql
-          name: mysql
+          name: mysql-vol
       restartPolicy: Always
       serviceAccountName: ""
       volumes:
-      - name: mysql
+      - name: mysql-vol
         persistentVolumeClaim:
           claimName: mysql-pvc
 status: {}
