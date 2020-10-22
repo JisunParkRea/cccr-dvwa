@@ -10,9 +10,6 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   storageClassName: mysql
-  mountOptions:
-    - hard
-    - nfsvers=3
   nfs:
     path: /file_share
     server: 10.254.194.120
