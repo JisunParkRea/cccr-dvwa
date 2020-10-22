@@ -14,5 +14,5 @@ spec:
     - hard
     - nfsvers=3
   nfs:
-    path: /file-share
+    path: /file_share
     server: 10.254.194.120
