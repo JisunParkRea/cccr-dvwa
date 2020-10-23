@@ -16,7 +16,7 @@
             </div>
             <div class='col-md-9'>
                 <h3>Welcome to <strong>Damn Vulnerable Java Application</strong></h3>
-                <p>The <em>Damn Vulnerable Java Application</em> implements a set of intentionally vulnerable functions in Java for learning purpose.
+                <p>The <i>Damn Vulnerable Java Application</i> implements a set of intentionally vulnerable functions in Java for learning purpose.
                 Start by selecting one of the vulnerability class from the left menu or select one of the link below: </p>
 
                 <ul>
