@@ -10,7 +10,7 @@ spec:
   accessModes:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: "mysql"
+  storageClassName: ""
   nfs:
     path: /nfs_share
     server: 10.254.194.122
