@@ -6,13 +6,13 @@ metadata:
     kompose.version: 1.21.0 (992df58d8)
   creationTimestamp: null
   labels:
-    io.kompose.service: app
-  name: app
+    io.kompose.service: {{ .Values.name.app }}
+  name: {{ .Values.name.app }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      io.kompose.service: app
+      io.kompose.service: {{ .Values.name.app }}
   strategy: {}
   template:
     metadata:
@@ -21,7 +21,7 @@ spec:
         kompose.version: 1.21.0 (992df58d8)
       creationTimestamp: null
       labels:
-        io.kompose.service: app
+        io.kompose.service: {{ .Values.name.app }}
     spec:
       containers:
       - env:
@@ -31,7 +31,7 @@ spec:
           value: root
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
-        name: app
+        name: {{ .Values.name.app }}
         ports:
         - containerPort: 8080
         resources: {}
