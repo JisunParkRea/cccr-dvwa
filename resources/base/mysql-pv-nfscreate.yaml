@@ -11,5 +11,5 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: mysql
   nfs:
-    path: /file_share
-    server: 10.254.194.120
+    path: nfs_share
+    server: 10.254.194.122
