@@ -29,7 +29,7 @@ spec:
           value: {{ .Values.value }}
         - name: MYSQL_USER
           value: root
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         name: app
         ports:
