@@ -6,12 +6,12 @@ metadata:
     kompose.version: 1.21.0 (992df58d8)
   creationTimestamp: null
   labels:
-    io.kompose.service: mysql
-  name: mysql
+    io.kompose.service: {{ .Values.name.mysql }}
+  name: {{ .Values.name.mysql }}
 spec:
   ports:
   - name: "3306"
     port: 3306
     targetPort: 3306
   selector:
-    io.kompose.service: mysql
+    io.kompose.service: {{ .Values.name.mysql }}
