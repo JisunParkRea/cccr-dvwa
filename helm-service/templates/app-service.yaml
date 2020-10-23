@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    cloud.google.com/neg: '{"ingress":true}'
+    field.cattle.io/publicEndpoints: '[{"addresses":["35.225.47.47"],"port":8080,"protocol":"TCP","serviceName":"cd-test:app","allNodes":true}]'
+    kompose.cmd: kompose convert
+    kompose.version: 1.21.0 (992df58d8)
+  labels:
+    io.kompose.service: app
+  name: app
+  namespace: cd-test
+spec:
+  externalTrafficPolicy: Cluster
+  ports:
+  - name: "8080"
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    io.kompose.service: app
+  sessionAffinity: ClientIP
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    - ip: 35.225.47.47
