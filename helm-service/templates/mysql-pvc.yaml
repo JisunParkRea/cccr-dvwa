@@ -3,9 +3,9 @@ kind: PersistentVolumeClaim
 metadata:
   creationTimestamp: null
   labels:
-    io.kompose.service: {{ .Values.name.mysql }}
+    io.kompose.service: mysql
   name: mysql-pvc
-  namespace: {{ .Values.namespace }}
+  namespace: cd-test
 spec:
   accessModes:
   - ReadWriteMany
