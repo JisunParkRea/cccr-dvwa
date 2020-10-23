@@ -15,5 +15,4 @@ value: ec95c258266b8e985848cae688effa2b
 namespace: cd-test
 
 name: 
-  mysql: mysql
   app: app
