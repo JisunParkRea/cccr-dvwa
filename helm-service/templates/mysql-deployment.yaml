@@ -14,7 +14,7 @@ spec:
     matchLabels:
       io.kompose.service: {{ .Values.name.mysql }}
   strategy:
-    type: {{ .Values.name.mysql }}
+    type: Recreate
   template:
     metadata:
       annotations:
