@@ -6,15 +6,15 @@ metadata:
     kompose.version: 1.21.0 (992df58d8)
   creationTimestamp: null
   labels:
-    io.kompose.service: mysql
-  name: mysql
+    io.kompose.service: {{ .Values.name.mysql }}
+  name: {{ .Values.name.mysql }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: mysql
+      io.kompose.service: {{ .Values.name.mysql }}
   strategy:
-    type: Recreate
+    type: {{ .Values.name.mysql }}
   template:
     metadata:
       annotations:
@@ -22,15 +22,15 @@ spec:
         kompose.version: 1.21.0 (992df58d8)
       creationTimestamp: null
       labels:
-        io.kompose.service: mysql
+        io.kompose.service: {{ .Values.name.mysql }}
     spec:
       containers:
       - env:
         - name: MYSQL_ROOT_PASSWORD
-          value: ec95c258266b8e985848cae688effa2b
+          value: {{ .Values.value }}
         image: mysql:5.5
         imagePullPolicy: ""
-        name: mysql
+        name: {{ .Values.name.mysql }}
         resources: {}
         volumeMounts:
         - mountPath: /var/lib/mysql
