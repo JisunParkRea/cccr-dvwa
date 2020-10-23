@@ -29,7 +29,7 @@ spec:
         - name: MYSQL_ROOT_PASSWORD
           value: ec95c258266b8e985848cae688effa2b
         image: mysql:5.5
-        imagePullPolicy: ""
+        imagePullPolicy: IfNotPresent
         name: mysql
         resources: {}
         volumeMounts:
