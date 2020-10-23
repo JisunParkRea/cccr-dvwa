@@ -1,0 +1,13 @@
+# Default values for ghost.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 3
+
+image:
+  repository: jisunpark/cccr-dvwa-java-web
+  tag: latest
+  pullPolicy: ""
+
+
+value: ec95c258266b8e985848cae688effa2b
