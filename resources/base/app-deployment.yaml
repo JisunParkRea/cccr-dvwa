@@ -9,7 +9,7 @@ metadata:
     io.kompose.service: app
   name: app
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
       io.kompose.service: app
@@ -29,7 +29,7 @@ spec:
           value: ec95c258266b8e985848cae688effa2b
         - name: MYSQL_USER
           value: root
-        image: jisunpark/cccr-dvwa-java-web:latest
+        image: jisunpark/cccr-dvwa-java-web:238
         imagePullPolicy: ""
         name: app
         ports:
