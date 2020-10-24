@@ -8,7 +8,7 @@ metadata:
     kompose.version: 1.21.0 (992df58d8)
   labels:
     io.kompose.service: {{ .Values.name.app }}
-  name: {{ .Values.name.app }}
+  name: traefik-static-lb
   namespace: {{ .Values.namespace }}
 spec:
   externalTrafficPolicy: Cluster
@@ -24,4 +24,4 @@ spec:
 status:
   loadBalancer:
     ingress:
-    - ip: 34.122.115.231
+    - ip: 35.225.214.69
