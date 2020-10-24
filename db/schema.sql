@@ -40,7 +40,7 @@ CREATE TABLE `products` (
 -- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
+/*DROP TABLE IF EXISTS `users`;*/
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
