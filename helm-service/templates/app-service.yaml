@@ -24,7 +24,6 @@ spec:
   externalTrafficPolicy: Cluster
   ports:
   - name: "8080"
-    nodePort: 30886
     port: 8080
     protocol: TCP
     targetPort: 8080
