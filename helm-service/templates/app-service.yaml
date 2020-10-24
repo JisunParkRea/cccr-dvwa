@@ -20,7 +20,7 @@ metadata:
   selfLink: /api/v1/namespaces/cd-test/services/app
   uid: 3eeb0fe2-ae56-4a36-aef0-98d9d40c0b47
 spec:
-  clusterIP: 10.0.17.156
+  clusterIP: ""
   externalTrafficPolicy: Cluster
   ports:
   - name: "8080"
