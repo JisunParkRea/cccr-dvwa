@@ -6,7 +6,7 @@ replicaCount: 3
 
 image:
   repository: jisunpark/cccr-dvwa-java-web
-  tag: 1
+  tag: 2
   pullPolicy: ""
 
 
