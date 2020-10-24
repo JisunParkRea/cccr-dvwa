@@ -3,24 +3,14 @@ kind: Service
 metadata:
   annotations:
     cloud.google.com/neg: '{"ingress":true}'
-    field.cattle.io/publicEndpoints: '[{"addresses":["35.223.27.28"],"port":8080,"protocol":"TCP","serviceName":"cd-test:app-lb","allNodes":false}]'
+    field.cattle.io/publicEndpoints: '[{"addresses":["35.223.27.28"],"port":8080,"protocol":"TCP","serviceName":"cd-test:app","allNodes":true}]'
     kompose.cmd: kompose convert
     kompose.version: 1.21.0 (992df58d8)
-    kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"cloud.google.com/neg":"{\"ingress\":true}","field.cattle.io/publicEndpoints":"[{\"addresses\":[\"35.225.47.47\"],\"port\":8080,\"protocol\":\"TCP\",\"serviceName\":\"cd-test:app\",\"allNodes\":true}]","kompose.cmd":"kompose convert","kompose.version":"1.21.0 (992df58d8)"},"labels":{"argocd.argoproj.io/instance":"test","io.kompose.service":"app"},"name":"app","namespace":"cd-test"},"spec":{"externalTrafficPolicy":"Cluster","ports":[{"name":"8080","port":8080,"protocol":"TCP","targetPort":8080}],"selector":{"io.kompose.service":"app"},"sessionAffinity":"ClientIP","type":"LoadBalancer"},"status":{"loadBalancer":{"ingress":[{"ip":"35.223.27.28"}]}}}
-  creationTimestamp: "2020-10-24T06:07:29Z"
-  finalizers:
-  - service.kubernetes.io/load-balancer-cleanup
   labels:
-    argocd.argoproj.io/instance: test
-    io.kompose.service: app
-  name: app-lb
-  namespace: cd-test
-  resourceVersion: "1721133"
-  selfLink: /api/v1/namespaces/cd-test/services/app
-  uid: 3eeb0fe2-ae56-4a36-aef0-98d9d40c0b47
+    io.kompose.service: {{ .Values.name.app }}
+  name: traefik-static-lb
+  namespace: {{ .Values.namespace }}
 spec:
-  clusterIP: ""
   externalTrafficPolicy: Cluster
   ports:
   - name: "8080"
@@ -28,13 +18,7 @@ spec:
     protocol: TCP
     targetPort: 8080
   selector:
-    io.kompose.service: app
+    io.kompose.service: {{ .Values.name.app }}
   sessionAffinity: ClientIP
-  sessionAffinityConfig:
-    clientIP:
-      timeoutSeconds: 10800
   type: LoadBalancer
-status:
-  loadBalancer:
-    ingress:
-    - ip: 35.223.27.28
+  loadBalancerIP: 35.223.27.28
