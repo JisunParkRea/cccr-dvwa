@@ -15,7 +15,7 @@
                 <jsp:include page="common/Menu.jsp"></jsp:include>
             </div>
             <div class='col-md-9'>
-                <h3>Welcome to <strong>Damn Vulnerable Java Application</strong></h3>
+                <h3>Hello to <strong>Damn Vulnerable Java Application</strong></h3>
                 <p>The <en>Damn Vulnerable Java Application</en> implements a set of intentionally vulnerable functions in Java for learning purpose.
                 Start by selecting one of the vulnerability class from the left menu or select one of the link below: </p>
 
