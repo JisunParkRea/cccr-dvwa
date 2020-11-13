@@ -7,10 +7,10 @@ RUN apt-get install -y maven
 
 WORKDIR /app
 COPY pom.xml pom.xml
-RUN mvn dependency:resolve -Dcheckstyle.skip -Dspotbugs.skip -Dpmd.skip
+RUN mvn dependency:resolve
 
 COPY . .
-RUN mvn clean package -Dcheckstyle.skip -Dspotbugs.skip -Dpmd.skip
+RUN mvn clean package
 RUN chmod 755 /app/scripts/start.sh
 
 EXPOSE 8080
