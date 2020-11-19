@@ -28,7 +28,7 @@
           <element id="library" level="project" name="Maven: log4j:log4j:1.2.14" />
           <element id="library" level="project" name="Maven: cglib:cglib:2.2" />
           <element id="library" level="project" name="Maven: asm:asm:3.1" />
-          <element id="library" level="project" name="Maven: com.jgeppert.struts2.bootstrap:struts2-bootstrap-plugin:2.5.2" />
+          <element id="library" level="project" name="Maven: com.jgeppert.struts2.bootstrap:struts2-bootstrap-plugin:2.5.1" />
           <element id="library" level="project" name="Maven: org.apache.velocity:velocity-tools:2.0" />
           <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.7.0" />
           <element id="library" level="project" name="Maven: commons-digester:commons-digester:1.8" />
