@@ -62,7 +62,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:3.0.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-orm:3.0.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:3.0.5.RELEASE" />
-          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.42" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.22" />
           <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.8.1" />
         </element>
       </element>
