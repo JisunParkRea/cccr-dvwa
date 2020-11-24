@@ -7,7 +7,7 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<script src='${request.contextPath}/assets/jquery-3.2.1.min.js'></script>
+<script src='${request.contextPath}/assets/jquery-3.5.1.min.js'></script>
 <sb:head/>
 
 <link rel="stylesheet" href="${request.contextPath}/assets/fa/css/font-awesome.min.css">
